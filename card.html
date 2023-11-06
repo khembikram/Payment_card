@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="card.css" />
+    <title>Interactive card Design</title>
+  </head>
+
+  <body>
+    <div class="total_content">
+      <!-- conent right starts -->
+      <div class="right_content">
+        <img src="bg-main-desktop.png" alt="img" class="img_img" />
+      </div>
+      <!-- content right ends -->
+
+      <!-- conent left starts -->
+      <div class="card_form">
+        <form action="index.php" method="post">
+          <div class="fullname">
+            <label for="name">CARDHOLDER NAME</label><br />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="e.g.Jane Appleseed"
+            /><br />
+          </div>
+
+          <div class="number">
+            <label for="num">CARD NUMBER</label><br />
+            <input
+              type="tel"
+              name="num"
+              id="num"
+              placeholder="e.g. 1234 5678 9123 0000"
+              pattern="[0-9\s]{13,19}"
+              autocomplete="cc-number"
+              maxlength="16"
+            /><br />
+          </div>
+
+          <div class="total_detail">
+            <div class="card_main_detail">
+              <div class="card_detal">
+                <label for="exp">EXP. DATE (MM/YY)</label><br />
+                <input
+                  type="text"
+                  name="exp"
+                  id="exp"
+                  placeholder="MM"
+                  maxlength="2"
+                /><input
+                  type="tel"
+                  name="exp"
+                  id="exp"
+                  placeholder="YY"
+                  maxlength="2"
+                />
+              </div>
+              <div class="card_cv">
+                <label for="cvc">CVC</label><br />
+                <input
+                  type="tel"
+                  name="cvc"
+                  id="cvc"
+                  placeholder="e.g. 123"
+                  maxlength="3"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="button">
+            <button type="submit" class="subm">Confirm</button>
+          </div>
+        </form>
+      </div>
+      <!-- content left ends -->
+    </div>
+    <script src="card.js"></script>
+  </body>
+</html>
